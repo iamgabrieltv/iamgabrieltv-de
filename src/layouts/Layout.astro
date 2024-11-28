@@ -16,10 +16,18 @@ const { title } = Astro.props;
     <meta name="generator" content={Astro.generator} />
     <title>{title} - IamGabriel</title>
   </head>
-  <body class="bg-ctp-base">
+  <body class="bg-ctp-base px-4">
+    <nav class="py-4">
+      <div class="container mx-auto flex items-center justify-start space-x-4">
+        <a href="/" class="hover:text-gray-300">Home</a>
+        <a href="/projects" class="hover:text-gray-300">Projects</a>
+        <a href="/guestbook" class="hover:text-gray-300">Guestbook</a>
+      </div>
+    </nav>
     <slot />
   </body>
 </html>
+
 <style is:global>
   @font-face {
     font-family: JetBrainsMono;
